@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Aug  4 10:45:22 2021
-
-@author: Catarina
-"""
 import os, csv, mysql.connector, sshtunnel, json
 from Bio import SeqIO
 from Bio.Seq import Seq
