@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
 """
-Created on Fri Aug 3 14:14:26 2021
-
-@author: Catarina
-
 for each species, CAIS controlled for local GC content will be a geometric mean of RSCU values across gene clumps 
 
 for ease of computation, calculate as log of (sum of RSCUs across clumps across a species) then raise e to that power.... to get a tiny number to calculate CAIS
@@ -61,22 +56,4 @@ for species in speciesUID_list:
     CAIS_dict[species] = CAIS
     print(CAIS)
     cnx.close()
-
-# for i in range(1,10):
-#     if Verbose == True:
-#         print('Extracting SpeciesUID: %s'%i)
-#         sys.stdout.flush()
-        
-#     SelectionStatement = "SELECT SUM(*) as row_sum FROM %s WHERE SpeciesUID = %s"%(CodingTable,i)
-#     # note "*" is WHOLE ROW OF ENTRIES
-#     mycursor.execute(SelectionStatement)
-#     speciesSpecificResults = mycursor.fetchall()
-    
-#     LogOfCAIS = 0
-#         for k in range(0,len(row_sum)):
-#             LogOfCAIS += math.log(RelativeAdaptednessTable[AA][Codon])      
-#             # We divide by the total number of codons in all coding sequences
-#             LogOfCAIS = (1/totalCodonCount)*LogOfCAIS
-#             # and we invert the log to get the CAIS
-#             CAIS = math.exp(LogOfCAIS)  
             
